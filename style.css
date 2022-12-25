@@ -13,6 +13,33 @@
   --shadow: black;
 }
 
+h1 {
+  font-family: "Mountains of Christmas";
+  font-size: 28px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+h2 {
+  font-family: "Mountains of Christmas";
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+h3 {
+  font-family: "Mountains of Christmas";
+  font-size: 23px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+
 /* == main start ==  */
 /* ///////////////// */
 .snowflake {
@@ -133,6 +160,58 @@
   -webkit-animation-delay: 3s, 1.5s;
   animation-delay: 3s, 1.5s;
 }
+
+.snowflake:nth-of-type(10) {
+  left: 90%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+.snowflake:nth-of-type(11) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+.snowflake:nth-of-type(12) {
+  left: 70%;
+  -webkit-animation-delay: 6s, 0.5s;
+  animation-delay: 6s, 0.5s;
+}
+.snowflake:nth-of-type(13) {
+  left: 60%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+.snowflake:nth-of-type(14) {
+  left: 50%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+.snowflake:nth-of-type(15) {
+  left: 40%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+.snowflake:nth-of-type(16) {
+  left: 30%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+.snowflake:nth-of-type(17) {
+  left: 20%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+.snowflake:nth-of-type(18) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+.snowflake:nth-of-type(19) {
+  left: 1%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+
 /* Demo Purpose Only*/
 
 /* ////  ==header== ////*/
@@ -150,9 +229,10 @@
 }
 
 .main__header--logo img {
-  padding-top: 7rem;
+  margin-top: 8rem;
   width: 150px;
   height: 150px;
+  border: 6px solid white;
 }
 
 .main__header--wish {
@@ -172,6 +252,12 @@
   color: white;
   font-size: 20px;
   letter-spacing: 1px;
+  font-family: "Mountains of Christmas";
+  margin-top: 1rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .main__header--wish img {
@@ -185,7 +271,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  border: 8px solid goldenrod;
+  border: 8px solid rgb(218, 165, 32);
   padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
@@ -241,13 +327,13 @@
   position: absolute;
   bottom: -370px;
   color: #fff;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(128, 10, 10, 0.6));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 30, 0, 0.6));
   backdrop-filter: blur(15px);
   min-height: 530px;
   width: 100%;
   transition: bottom 0.4s ease-in-out;
-  box-shadow: 0 -10px 10px rgba(128, 10, 10, 0.1);
-  border-top: 1px solid rgba(234, 234, 210, 0.6);
+  box-shadow: 0 -10px 10px rgba(255, 30, 0, 0.1);
+  border-top: 1px solid rgba(218, 165, 32, 0.9);
 }
 
 .main__body--card__inner:hover .main__body--card__inner--content {
@@ -256,8 +342,13 @@
 
 .main__body--card__inner--content h2 {
   margin-top: 40px;
-  margin-left: 30%;
 }
+
+.main__body--card__inner--content h2 {
+  word-break: break-all;
+  margin-left: 37%;
+}
+
 .main__body--card__inner--content h3 {
   margin-top: 20px;
   margin-left: 40%;
@@ -305,17 +396,18 @@
 
 /* for each item button style */
 .main__body--card__button {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   margin-top: 2rem;
   cursor: pointer;
   width: 120px;
   height: 50px;
   border-radius: 150px;
   box-shadow: 0 5px 15px var(--shadow);
-  transition: 0.4s;
+  transition: 0.2s ease-in-out;
 }
 
 .main__body--card__button a {
+  font-weight: 550;
   padding-left: 2rem;
   padding-top: 1rem;
   position: absolute;
@@ -323,7 +415,8 @@
 
 .main__body--card__button:hover {
   transform: scale(1.1);
-  font-weight: 700;
+  font-weight: 800;
+  background-color: var(--color-primary);
 }
 
 @media screen and (max-width: 1050px) {
@@ -351,7 +444,8 @@
 .footer--section__logo img {
   width: 150px;
   height: 150px;
-  padding: 20px;
+  margin: 15px;
+  border: 6px solid white;
 }
 
 .footer--section__contact {
