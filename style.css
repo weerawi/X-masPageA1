@@ -22,22 +22,13 @@ h1 {
   line-height: 26.4px;
 }
 
-h2 {
+pre {
   font-family: "Mountains of Christmas";
   font-size: 25px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
   line-height: 30px;
-}
-
-h3 {
-  font-family: "Mountains of Christmas";
-  font-size: 23px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 15.4px;
 }
 
 /* == main start ==  */
@@ -216,11 +207,116 @@ h3 {
 
 /* ////  ==header== ////*/
 
+.main__header .snowflakes {
+  width: 100%;
+  height: 1200px;
+  position: absolute;
+  top: -90px;
+  left: 0;
+}
+
+i,
+i:after,
+i:before {
+  background: white;
+}
+i {
+  display: inline-block;
+  -webkit-animation: snowflakes 3s linear 2s 20;
+  -moz-animation: snowflakes 3s linear 2s 20;
+  position: relative;
+}
+i:after,
+i:before {
+  height: 100%;
+  width: 100%;
+  content: ".";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-transform: rotate(120deg);
+}
+i:before {
+  -webkit-transform: rotate(240deg);
+}
+
+@-webkit-keyframes snowflakes {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: translate3d(15px, 1200px, 0px) rotate(360deg) scale(0.6);
+  }
+}
+
+.main__header .snowflakes i:nth-child(3n) {
+  width: 16px;
+  height: 4px;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 30;
+  -webkit-transform-origin: right -45px;
+}
+
+.main__header .snowflakes i:nth-child(3n + 1) {
+  width: 24px;
+  height: 6px;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: 45;
+  -webkit-transform-origin: right -30px;
+}
+
+.main__header .snowflakes i:nth-child(3n + 2) {
+  width: 32px;
+  height: 8px;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-iteration-count: 60;
+  -webkit-transform-origin: right -15px;
+}
+
+/* different delays so they don't all start at the same time */
+.main__header .snowflakes i:nth-child(7n) {
+  opacity: 0.3;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-timing-function: ease-in;
+}
+.main__header .snowflakes i:nth-child(7n + 1) {
+  opacity: 0.4;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-timing-function: ease-out;
+}
+.main__header .snowflakes i:nth-child(7n + 2) {
+  opacity: 0.5;
+  -webkit-animation-delay: 1.5s;
+  -webkit-animation-timing-function: linear;
+}
+.main__header .snowflakes i:nth-child(7n + 3) {
+  opacity: 0.6;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-timing-function: ease-in;
+}
+.main__header .snowflakes i:nth-child(7n + 4) {
+  opacity: 0.7;
+  -webkit-animation-delay: 2.5s;
+  -webkit-animation-timing-function: linear;
+}
+.main__header .snowflakes i:nth-child(7n + 5) {
+  opacity: 0.8;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-timing-function: ease-out;
+}
+.main__header .snowflakes i:nth-child(7n + 6) {
+  opacity: 0.9;
+  -webkit-animation-delay: 3.5s;
+  -webkit-animation-timing-function: ease-in;
+}
+
 .main__header {
   position: relative;
   display: flex;
   background-color: var(--color-primary);
   height: 450px;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
 }
 
 .main__header--logoimg,
@@ -276,11 +372,40 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+}
+
+.main__body--discount {
+  position: absolute;
+  margin-top: -85px;
+  align-items: center;
+  border-radius: 12px;
+  width: 300px;
+  height: 50px;
+  background: red;
+  padding-left: 30px !important;
+  padding: 10px 0;
+  font-size: 25px;
+  color: white;
+  box-shadow: 6px 5px 12px black;
+}
+
+.main__body--discount:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 18px solid red;
+  border-top: 33px solid transparent;
+  border-bottom: 33px solid transparent;
 }
 
 /* for all items in body */
 .main__body--card {
   padding: 10px;
+  margin-top: 30px;
   margin: 10px;
   width: 450px;
   display: flex;
@@ -340,18 +465,8 @@ h3 {
   bottom: 0px;
 }
 
-.main__body--card__inner--content h2 {
+.main__body--card__inner--content pre {
   margin-top: 40px;
-}
-
-.main__body--card__inner--content h2 {
-  word-break: break-all;
-  margin-left: 37%;
-}
-
-.main__body--card__inner--content h3 {
-  margin-top: 20px;
-  margin-left: 40%;
 }
 
 .main__body--card__inner:hover .main__body--card__inner--content h4 {
