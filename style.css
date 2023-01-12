@@ -314,6 +314,7 @@ i:before {
   position: relative;
   display: flex;
   background-color: var(--color-primary);
+
   height: 450px;
   backdrop-filter: blur(15px);
   overflow: hidden;
@@ -570,6 +571,18 @@ i:before {
 
 .footer--section__contact p {
   font-size: 1.2rem;
+}
+
+.footer--section__contact a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 550;
+}
+
+.footer--section__contact a:hover {
+  color: lightgray;
+  font-weight: 550;
 }
 
 .footer--copywrite {
